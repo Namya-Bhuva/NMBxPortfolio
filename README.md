@@ -27,8 +27,8 @@ This portfolio is built with a focus on performance and modern design principles
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Namya-Bhuva/portfolio.git
-   cd portfolio
+   git clone https://github.com/Namya-Bhuva/NMBxPortfolio.git
+   cd NMBxPortfolio
    ```
 
 2. **Install dependencies**
