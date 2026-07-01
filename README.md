@@ -23,24 +23,6 @@ This portfolio is built with a focus on performance and modern design principles
 - **Jalaram Billing Software**: Comprehensive billing & inventory management system.
 - **JD Billing Software**: Full-stack billing software with area-wise customer management.
 
-## ⚙️ Running Locally
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Namya-Bhuva/NMBxPortfolio.git
-   cd NMBxPortfolio
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Run the development server**
-   ```bash
-   npm run dev
-   ```
-   Open `http://localhost:3000` (or the port provided in your terminal) to view it in the browser.
 
 ## 📫 Contact
 - **Email**: [namyabhuva@gmail.com](mailto:namyabhuva@gmail.com)
