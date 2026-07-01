@@ -1,0 +1,17 @@
+.app-wrapper {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: var(--accent-gradient);
+  z-index: 10001;
+  transition: width 0.1s linear;
+  pointer-events: none;
+  box-shadow: 0 0 10px rgba(0, 220, 130, 0.4);
+}
