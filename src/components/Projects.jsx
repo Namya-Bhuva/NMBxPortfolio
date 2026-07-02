@@ -2,8 +2,9 @@ import ScrollReveal from './utils/ScrollReveal';
 import { projects } from '../data/projects';
 import samrudhiMockup from '../assets/images/samrudhhi-mockup.png';
 import jalaramMockup from '../assets/images/jalaram-mockup.png';
+import jdMockup from '../assets/images/jd-mockup.png';
 
-const mockups = [samrudhiMockup, jalaramMockup, jalaramMockup];
+const mockups = [samrudhiMockup, jalaramMockup, jdMockup];
 
 export default function Projects() {
   return (

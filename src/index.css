@@ -4,9 +4,17 @@
    ═══════════════════════════════════════════════════════════════ */
 
 /* ── Reset ──────────────────────────────────────────────────── */
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   min-height: 100vh;
@@ -63,17 +71,33 @@ body {
 }
 
 /* ── Selection ──────────────────────────────────────────────── */
-::selection { background: rgba(0, 220, 130, 0.25); color: #fff; }
+::selection {
+  background: rgba(0, 220, 130, 0.25);
+  color: #fff;
+}
 
 /* ── Scrollbar ──────────────────────────────────────────────── */
-::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, #00DC82, #06B6D4);
   border-radius: 4px;
 }
-::-webkit-scrollbar-thumb:hover { background: var(--accent); }
-* { scrollbar-width: thin; scrollbar-color: #222 var(--bg); }
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #222 var(--bg);
+}
 
 /* ── Grain Overlay ──────────────────────────────────────────── */
 body::after {
@@ -88,7 +112,10 @@ body::after {
   background-size: 128px 128px;
 }
 
-#root { width: 100%; min-height: 100vh; }
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
 
 /* ── Section Base ───────────────────────────────────────────── */
 .section {
@@ -98,7 +125,9 @@ body::after {
   padding: 120px 40px;
 }
 
-.section-header { margin-bottom: 64px; }
+.section-header {
+  margin-bottom: 64px;
+}
 
 .section-label {
   font-family: var(--font-mono);
@@ -181,7 +210,7 @@ body::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 50%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 50%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -191,7 +220,9 @@ body::after {
   box-shadow: 0 8px 30px rgba(0, 220, 130, 0.3), 0 2px 8px rgba(6, 182, 212, 0.2);
 }
 
-.btn-primary:hover::before { opacity: 1; }
+.btn-primary:hover::before {
+  opacity: 1;
+}
 
 .btn-secondary {
   display: inline-flex;
@@ -245,10 +276,21 @@ body::after {
 }
 
 /* ── Links ──────────────────────────────────────────────────── */
-a { color: var(--accent); text-decoration: none; transition: color var(--transition-fast); }
-a:hover { color: var(--accent-cyan); }
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
 
-img, video { max-width: 100%; display: block; }
+a:hover {
+  color: var(--accent-cyan);
+}
+
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
 
 /* ══════════════════════════════════════════════════════════════
    SCROLL REVEAL SYSTEM
@@ -299,6 +341,7 @@ img, video { max-width: 100%; display: block; }
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -310,89 +353,179 @@ img, video { max-width: 100%; display: block; }
    ══════════════════════════════════════════════════════════════ */
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
 
 @keyframes slideUp {
-  from { transform: translateY(100%); }
-  to { transform: translateY(0); }
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
 }
 
 @keyframes slideInLeft {
-  from { opacity: 0; transform: translateX(-60px); }
-  to { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes slideInRight {
-  from { opacity: 0; transform: translateX(60px); }
-  to { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes glowPulse {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 1; }
+
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 @keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes scaleIn {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @keyframes drawLine {
-  from { stroke-dashoffset: 100; }
-  to { stroke-dashoffset: 0; }
+  from {
+    stroke-dashoffset: 100;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes morphBlob {
-  0%, 100% {
+
+  0%,
+  100% {
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     transform: rotate(0deg) scale(1);
   }
+
   25% {
     border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
     transform: rotate(90deg) scale(1.05);
   }
+
   50% {
     border-radius: 50% 60% 30% 60% / 30% 50% 70% 50%;
     transform: rotate(180deg) scale(0.95);
   }
+
   75% {
     border-radius: 60% 30% 50% 40% / 70% 40% 60% 30%;
     transform: rotate(270deg) scale(1.02);
@@ -400,16 +533,37 @@ img, video { max-width: 100%; display: block; }
 }
 
 @keyframes auroraShift {
-  0% { transform: translate(0%, 0%) rotate(0deg); }
-  25% { transform: translate(5%, -5%) rotate(3deg); }
-  50% { transform: translate(-3%, 3%) rotate(-2deg); }
-  75% { transform: translate(4%, -2%) rotate(1deg); }
-  100% { transform: translate(0%, 0%) rotate(0deg); }
+  0% {
+    transform: translate(0%, 0%) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(5%, -5%) rotate(3deg);
+  }
+
+  50% {
+    transform: translate(-3%, 3%) rotate(-2deg);
+  }
+
+  75% {
+    transform: translate(4%, -2%) rotate(1deg);
+  }
+
+  100% {
+    transform: translate(0%, 0%) rotate(0deg);
+  }
 }
 
 @keyframes pulseRing {
-  0% { transform: scale(1); opacity: 0.5; }
-  100% { transform: scale(2.5); opacity: 0; }
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
 }
 
 /* ══════════════════════════════════════════════════════════════
@@ -417,15 +571,58 @@ img, video { max-width: 100%; display: block; }
    ══════════════════════════════════════════════════════════════ */
 
 @media (max-width: 1024px) {
-  .section { padding: 80px 28px; }
-  .section-header { margin-bottom: 48px; }
+  .section {
+    padding: 80px 28px;
+  }
+
+  .section-header {
+    margin-bottom: 48px;
+  }
 }
 
 @media (max-width: 768px) {
-  .section { padding: 64px 20px; }
-  .section-header { margin-bottom: 36px; }
+  .section {
+    padding: 64px 20px;
+  }
+
+  .section-header {
+    margin-bottom: 36px;
+  }
 }
 
 @media (max-width: 480px) {
-  .section { padding: 48px 16px; }
+  .section {
+    padding: 48px 16px;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   REDUCED MOTION
+   Respects the visitor's OS-level "reduce motion" accessibility
+   setting by neutralizing all animations/transitions site-wide,
+   including scroll-reveal effects, the cursor glow, and smooth
+   scrolling. Content still appears, just without the motion.
+   ══════════════════════════════════════════════════════════════ */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Scroll-reveal / text-reveal elements: skip straight to their
+     final visible state instead of animating in */
+  .text-reveal-char,
+  .text-reveal-word {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }

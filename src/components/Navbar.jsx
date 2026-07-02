@@ -92,6 +92,11 @@ export default function Navbar() {
           color: #fff;
           letter-spacing: 0.08em;
         }
+        .nb-nav-right {
+          display: flex;
+          align-items: center;
+          gap: 24px;
+        }
         .nb-nav-links {
           display: flex;
           align-items: center;
@@ -128,6 +133,48 @@ export default function Navbar() {
         .nb-nav-link:hover::after,
         .nb-nav-link.active::after {
           width: 100%;
+        }
+        .nb-resume-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          padding: 8px 18px;
+          font-family: var(--font-mono, 'JetBrains Mono'), monospace;
+          font-size: 11px;
+          font-weight: 600;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          color: #000;
+          background: linear-gradient(135deg, #00DC82, #06B6D4);
+          border-radius: 100px;
+          text-decoration: none;
+          white-space: nowrap;
+          flex-shrink: 0;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .nb-resume-btn:hover {
+          transform: translateY(-1px);
+          box-shadow: 0 6px 20px rgba(0, 220, 130, 0.3);
+          color: #000;
+        }
+        .nb-resume-btn svg {
+          width: 13px;
+          height: 13px;
+        }
+        .nb-mobile-resume-btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          margin-top: 28px;
+          padding: 14px 0;
+          font-family: var(--font-display, 'Space Grotesk'), sans-serif;
+          font-weight: 600;
+          font-size: 0.95rem;
+          color: #000;
+          background: linear-gradient(135deg, #00DC82, #06B6D4);
+          border-radius: 10px;
+          text-decoration: none;
         }
         .nb-hamburger {
           display: none;
@@ -224,6 +271,9 @@ export default function Navbar() {
           .nb-nav-links {
             display: none;
           }
+          .nb-resume-btn {
+            display: none;
+          }
           .nb-hamburger {
             display: flex;
           }
@@ -240,19 +290,33 @@ export default function Navbar() {
           <span className="nb-logo-text">NAMYA M BHUVA</span>
         </a>
 
-        <ul className="nb-nav-links">
-          {navLinks.map((link) => (
-            <li key={link.label}>
-              <a
-                className={`nb-nav-link${activeSection === link.href.replace('#', '') ? ' active' : ''}`}
-                href={link.href}
-                onClick={(e) => handleNavClick(e, link.href)}
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className="nb-nav-right">
+          <ul className="nb-nav-links">
+            {navLinks.map((link) => (
+              <li key={link.label}>
+                <a
+                  className={`nb-nav-link${activeSection === link.href.replace('#', '') ? ' active' : ''}`}
+                  href={link.href}
+                  onClick={(e) => handleNavClick(e, link.href)}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <a
+            className="nb-resume-btn"
+            href="/Namya_Bhuva_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            CV
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16" />
+            </svg>
+          </a>
+        </div>
 
         <button
           className={`nb-hamburger${mobileOpen ? ' open' : ''}`}
@@ -279,6 +343,19 @@ export default function Navbar() {
             {link.label}
           </a>
         ))}
+
+        <a
+          className="nb-mobile-resume-btn"
+          href="/Namya_Bhuva_CV.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => setMobileOpen(false)}
+        >
+          Download CV
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16" />
+          </svg>
+        </a>
       </div>
     </>
   );

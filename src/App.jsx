@@ -15,8 +15,8 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 
 const techMarqueeItems = [
-  'React', 'Node.js', 'MongoDB', 'Express', 'Next.js', 'TypeScript',
-  'Firebase', 'Tailwind CSS', 'Figma', 'Git', 'JavaScript', 'HTML5', 'CSS3'
+  'React', 'Next.js', 'TypeScript', 'HTML5', 'CSS3', 'Tailwind CSS',
+  'Node.js', 'Express', 'MongoDB', 'REST APIs', 'Git'
 ];
 
 function App() {

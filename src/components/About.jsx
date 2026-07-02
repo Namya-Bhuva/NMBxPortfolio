@@ -17,11 +17,11 @@ export default function About() {
   const filteredSkills = activeCategory === 'All'
     ? skills
     : skills.filter(s => {
-        const cat = (s.category || '').toLowerCase();
-        const active = activeCategory.toLowerCase();
-        if (active === 'tools & design') return cat === 'tools' || cat === 'design';
-        return cat === active;
-      });
+      const cat = (s.category || '').toLowerCase();
+      const active = activeCategory.toLowerCase();
+      if (active === 'tools & design') return cat === 'tools' || cat === 'design';
+      return cat === active;
+    });
 
   const getGradient = (category) => {
     const cat = (category || '').toLowerCase();
@@ -280,8 +280,9 @@ export default function About() {
                 web applications using modern web technologies.
               </p>
               <p>
-                As a recent graduate, I blend a strong foundation in computer science
-                with hands-on experience in building scalable products that solve real-world problems.
+                I hold a BCA degree and am currently pursuing my MCA (graduating 2028),
+                blending a strong foundation in computer science with hands-on experience
+                in building scalable products that solve real-world problems.
               </p>
               <p>
                 Currently exploring new opportunities in the tech industry, eager to contribute

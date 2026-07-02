@@ -115,6 +115,18 @@ export default function Hero() {
           background-clip: text;
         }
 
+        /* Fix: letter spans have their own transform (for the reveal animation),
+           which breaks the parent's background-clip in Chrome/Safari.
+           Re-apply the gradient clip directly on the animated children. */
+        .hero-name-gradient .text-reveal-char,
+        .hero-name-gradient .text-reveal-word {
+          background: linear-gradient(135deg, #00DC82, #06B6D4);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          color: transparent;
+        }
+
         .hero-role {
           font-family: var(--font-mono, 'JetBrains Mono'), monospace;
           font-size: clamp(0.8rem, 1.5vw, 0.95rem);
