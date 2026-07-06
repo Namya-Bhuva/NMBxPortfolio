@@ -3,7 +3,7 @@
 Welcome to my personal portfolio repository! I am Namya M Bhuva, an enthusiastic Full Stack Developer from Rajkot, Gujarat. As a recent BCA graduate, I am passionate about building performant, intuitive, and scalable web applications using modern web technologies.
 
 ## 🚀 Live Preview
-Since this project is designed for deployment, you can host it easily on platforms like Vercel, Netlify, or GitHub Pages. *(Add your live link here once deployed!)*
+Since this project is designed for deployment, you can host it easily on platforms like Vercel, Netlify, or GitHub Pages. *https://nmbx-portfolio.vercel.app/*
 
 ## 🛠️ Tech Stack
 This portfolio is built with a focus on performance and modern design principles:
